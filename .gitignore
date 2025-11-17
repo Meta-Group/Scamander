@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.egg
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+.conda/
+
+# Pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Coverage reports
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Notebook conversion logs
+*.nbconvert.log
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Local environment files
+.env
+.envrc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc backups
+*~
+*.bak
+
+# Build/egg metadata / wheels
+pip-wheel-metadata/
+
+# Temporary files
+.cache/
+
+# Ignore local temporary experiment files
+.temp/
+
+# End of file
