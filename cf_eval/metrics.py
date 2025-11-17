@@ -2,7 +2,10 @@ import numpy as np
 
 from scipy.spatial.distance import cdist, pdist
 from scipy.spatial.distance import _validate_vector
-from scipy.stats import median_absolute_deviation
+try:
+    from scipy.stats import median_absolute_deviation
+except ImportError:
+    from scipy.stats import median_abs_deviation as median_absolute_deviation
 
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
