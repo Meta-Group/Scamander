@@ -1,4 +1,7 @@
 import platform
+import os
+
+path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 
 path_dataset = path + 'dataset/'
 path_models = path + 'models/'
