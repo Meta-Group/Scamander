@@ -9,3 +9,4 @@ numpy
 tslearn
 pyts
 sace
+ceml
