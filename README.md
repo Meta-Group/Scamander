@@ -19,6 +19,15 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+Adding Scamandar package directory to pythonpath so that we can import the experiments as is
+
+```bash
+cat >> .venv/bin/activate <<'BASH'
+export PYTHONPATH="${PYTHONPATH:+${PYTHONPATH}:}$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+BASH
+```
+In case the venv is active, you have to run `deactivate` and `source .venv/bin/activate` again to take effect.
+
 ### Windows (PowerShell)
 
 ```powershell
