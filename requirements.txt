@@ -8,5 +8,4 @@ pandas
 numpy
 tslearn
 pyts
-sace
 ceml
