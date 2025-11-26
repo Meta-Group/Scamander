@@ -172,6 +172,14 @@ def main():
 
         print(datetime.datetime.now(), dataset, black_box)
 
+        # Ensure output directories exist so writes don't fail
+        try:
+            os.makedirs(path_results, exist_ok=True)
+            os.makedirs(path_models, exist_ok=True)
+        except Exception:
+            # If creation fails, warn but continue; saving will likely fail later
+            print('Warning: failed to create results or models directories', path_results, path_models)
+
         data = get_tabular_dataset(dataset, path_dataset, normalize=normalize, test_size=test_size,
                                    random_state=random_state, encode=None if black_box == 'LGBM' else 'onehot')
         X_train, X_test, y_train, y_test = data['X_train'], data['X_test'], data['y_train'], data['y_test']
