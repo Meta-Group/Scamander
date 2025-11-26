@@ -706,7 +706,9 @@ def get_tabular_dataset(name, path='./', normalize=None, test_size=0.3, random_s
     n_cate_var = len(categorical_features_lists)
     n_cate_var1h = n_var - n_cont_var
 
-    X = df[feature_names].values
+    # Make sure X is a numeric numpy array (not object dtype), otherwise Keras/JAX backends
+    # raise a ValueError: Invalid dtype: object. Use to_numpy with explicit dtype to enforce numeric type.
+    X = df[feature_names].to_numpy(dtype=np.float64)
     y = df[class_name].values
 
     if normalize == 'minmax':
