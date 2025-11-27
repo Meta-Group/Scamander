@@ -65,6 +65,10 @@ pip-wheel-metadata/
 # Temporary files
 .cache/
 
+# Ignore generated experiment artifacts
+results/
+models/
+
 # Ignore local temporary experiment files
 .temp/
 
