@@ -14,9 +14,7 @@ from sace.blackbox import BlackBox
 from sace.random_sace import RandomSACE
 from sace.feature_sace import FeatureSACE
 from sace.neighbor_sace import NeighborSACE
-from sace.cluster_sace import KMeansSACE
 from sace.tree_sace import TreeSACE
-from sace.ensemble_sace import EnsembleSACE
 from sace.distr_sace import DistrSACE
 from sace.casebased_sace import CaseBasedSACE
 
